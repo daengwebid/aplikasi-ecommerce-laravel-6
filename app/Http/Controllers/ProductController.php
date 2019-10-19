@@ -49,7 +49,8 @@ class ProductController extends Controller
                 'description' => $request->description,
                 'image' => $filename,
                 'price' => $request->price,
-                'weight' => $request->weight
+                'weight' => $request->weight,
+                'status' => $request->status
             ]);
             return redirect(route('product.index'))->with(['success' => 'Produk Baru Ditambahkan']);
         }

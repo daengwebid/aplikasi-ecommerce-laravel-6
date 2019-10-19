@@ -38,6 +38,14 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select name="status" class="form-control" required>
+                                        <option value="1" {{ old('status') == '1' ? 'selected':'' }}>Publish</option>
+                                        <option value="0" {{ old('status') == '0' ? 'selected':'' }}>Draft</option>
+                                    </select>
+                                    <p class="text-danger">{{ $errors->first('status') }}</p>
+                                </div>
+                                <div class="form-group">
                                     <label for="category_id">Kategori</label>
                                     <select name="category_id" class="form-control">
                                         <option value="">Pilih</option>
