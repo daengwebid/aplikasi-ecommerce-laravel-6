@@ -1,0 +1,133 @@
+/* Main Button Area css
+============================================================================================ */
+.main_btn{
+	display: inline-block;
+	background: $baseColor;
+	padding: 0px 30px;
+	color: #fff;
+	font-family: $rob;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 48px;
+	border: 1px solid $baseColor;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $baseColor;
+	cursor: pointer;
+	@include transition;
+	border-radius: 5px;
+	&:hover{
+		background: transparent;
+		color: $baseColor;
+	}
+}
+.main_btn2{
+	display: inline-block;
+	background: $baseColor;
+	padding: 0px 32px;
+	color: #fff;
+	font-family: $rob;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 38px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $baseColor;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: transparent;
+		color: $baseColor;
+	}
+}
+.submit_btn{
+	display: inline-block;
+	background: $baseColor;
+	padding: 0px 30px;
+	color: #fff;
+	font-family: $rob;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 38px;
+	border: 1px solid $baseColor;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid $baseColor;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: transparent;
+		color: $baseColor;
+	}
+}
+
+.white_bg_btn{
+	display: inline-block;
+	background: #f9f9ff;
+	padding: 0px 35px;
+	color: $dip;
+	font-family: $rob;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 34px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid #eeeeee;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: $baseColor;
+		color: #fff;
+		border-color: $baseColor;
+	}
+}
+.org_btn{
+	padding: 0px 40px;
+    background-image: linear-gradient(to right, #f766a5 0%, #f78762 51%, #f766a5 100%);
+    background-size: 200% auto;
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+    font-family: $pop;
+    line-height: 50px;
+    border-radius: 5px;
+    &:hover{
+        background-position: right center;
+        color: #fff;
+    }
+}
+.green_btn{
+	padding: 0px 40px;
+    background-image: linear-gradient(to right, #73ca96 0%, #98d370 51%, #73ca96 100%);
+    background-size: 200% auto;
+    z-index: 2;
+    display: inline-block;
+    transition: all 400ms ease-out;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+    font-family: $pop;
+    line-height: 50px;
+    border-radius: 5px;
+    &:hover{
+        background-position: right center;
+        color: #fff;
+    }
+}
+/* End Main Button Area css
+============================================================================================ */

@@ -1,0 +1,129 @@
+/*============== footer-area css ===============*/
+.single-footer-widget{
+    p{
+        margin-bottom: 0px;
+		color: $pfont;
+		max-width: 235px;
+    }
+    ul{
+        li{
+            a{
+                line-height: 25px;
+                display: inline-block;
+                color: #777;
+                transition: all 0.3s linear;
+                margin-bottom: 13px;
+                &:hover{
+                    color: $baseColor;
+                }
+            }
+        }
+    }
+    .instafeed{
+        margin-left: -5px;
+        margin-right: -5px;
+        li{
+            margin: 5px;
+        }
+    }
+    .subscribe_form{
+        padding-top: 25px;
+    }
+	.input-group{
+		display: block !important;
+	}
+    input{
+        width: 100%;
+        border: 1px solid #fff;
+        font-size: 13px;
+        line-height: 30px;
+		padding-right: 40px;
+		height: 40px;
+        color: #999999;
+        background: #f9f9ff;
+        padding-left: 20px;
+        @include placeholder{
+            color: #999999;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+    .sub-btn{
+        background: $baseColor;
+        color: #fff;
+        font-weight: 300;
+        border-radius: 0;
+        line-height: 34px;
+        padding: 4px 11px 0px;
+        cursor: pointer;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		span{
+			position: relative;
+			top: -1px;
+		}
+    }
+}
+.footer_title{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $dip;
+    margin-bottom: 28px;
+}
+.border_line{
+    width: 100%;
+    height: 1px;
+    background: #333333;
+    margin-top: 30px;
+}
+.footer-bottom{
+    padding-top: 70px;
+    .footer-text{
+		margin-bottom: 0px;
+		i{
+			color: $baseColor;
+		}
+        a{
+            color: $baseColor;
+        }
+    }
+    .footer-social{
+        text-align: right;
+        a{
+            font-size: 18px;
+            line-height: 30px;
+            color: #82848f;
+            margin-left: 25px;
+            transition: all 0.3s linear;
+            &:hover{
+                color: $baseColor;
+            }
+        }
+    }
+}
+
+
+.f_social_wd{
+	p{
+		font-size: 14px;
+		color: $pfont;
+		margin-bottom: 15px;
+	}
+	.f_social{
+		a{
+			font-size: 14px;
+            color: $pfont;
+            transition: all 0.3s linear;
+			margin-right: 20px;
+            &:hover{
+                color: $baseColor;
+            }
+			&:last-child{
+				margin-right: 0px;
+			}
+		}
+	}
+}

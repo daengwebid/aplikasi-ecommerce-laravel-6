@@ -1,0 +1,79 @@
+
+/* Clients Logo Area css
+============================================================================================ */
+.clients_logo_area{
+	.clients_slider{
+		.item{
+			text-align: center;
+			img{
+				width: auto;
+				text-align: center;
+				display: block;
+				margin: auto;
+				line-height: 70px;
+				opacity: .2;
+				@include transition;
+			}
+			&:hover{
+				img{
+					opacity: 1;
+				} 
+			}
+		}
+	}
+}
+/* End Clients Logo Area css
+============================================================================================ */
+
+/* Clients Says Area css
+============================================================================================ */
+.client_says_area{
+	
+}
+.client_says_inner{
+	
+}
+.says_left{
+	max-width: 335px;
+	h3{
+		color: $dip;
+		font-size: 36px;
+		line-height: 45px;
+		margin-bottom: 20px;
+		margin-top: 30px;
+	}
+	p{
+		margin-bottom: 0px;
+	}
+}
+.says_item{
+	background: #fff;
+	border: 1px solid #eeeeee;
+	border-radius: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	@include transition;
+	h4{
+		font-size: 20px;
+		color: $dip;
+		margin-bottom: 13px;
+	}
+	h5{
+		color: $pfont;
+		font-family: $rob;
+		font-weight: 300;
+		font-size: 14px;
+		margin-bottom: 32px;
+	}
+	p{
+		margin-bottom: 0px;
+	}
+	&:hover{
+		box-shadow: 0px 10px 30px 0px rgba(98, 71, 234, 0.1);
+		border-color: #fff;
+	}
+}
+/* End Clients Says Area css
+============================================================================================ */

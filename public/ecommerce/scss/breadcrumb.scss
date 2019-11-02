@@ -1,0 +1,175 @@
+/* Home Banner Area css
+============================================================================================ */
+
+.home_banner_area {
+    background: url(../img/banner/banner-bg.jpg) no-repeat center bottom;
+    position: relative;
+    z-index: 1;
+    min-height: 900px;
+    .overlay {
+        background: rgba(0, 0, 0, 0.33);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        bottom: 0;
+        z-index: -1;
+    }
+    .banner_inner {
+        position: relative;
+        width: 100%;
+        min-height: 900px;
+        .banner_content {
+            color: $dip;
+            padding-top: 110px;
+            align-self: center;
+			vertical-align: middle;
+			text-align: center;
+            h3 {
+                font-size: 60px;
+                font-family: $rob;
+                font-weight: 500;
+                line-height: 66px;
+				margin-bottom: 20px;
+				color: #ffffff;
+            }
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                font-family: $rob;
+                font-weight: normal;
+                color: #ffffff;
+            }
+            .white_bg_btn {
+                margin-top: 45px;
+                line-height: 50px;
+                border-radius: 5px;
+                display: inline-block;
+                font-weight: 500;
+                font-size: 14px;
+                box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+            }
+            .halemet_img {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.blog_banner {
+    min-height: 780px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 0px;
+    .banner_inner {
+        background: #04091e;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 780px;
+        z-index: 1;
+        .overlay {
+            background: url(../img/banner/banner-2.jpg) no-repeat scroll center center;
+            opacity: .5;
+            height: 125%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            z-index: -1;
+        }
+        .blog_b_text {
+            max-width: 700px;
+            margin: auto;
+            color: #fff;
+            margin-top: 40px;
+            h2 {
+                font-size: 60px;
+                font-weight: 500;
+                font-family: $rob;
+                line-height: 66px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+            .white_bg_btn {
+                line-height: 42px;
+                padding: 0px 45px;
+            }
+        }
+    }
+}
+
+.banner_box {
+    max-width: 1620px;
+    margin: auto;
+}
+
+.banner_area {
+    position: relative;
+    z-index: 1;
+    min-height: 395px;
+    .banner_inner {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 395px;
+        background: url(../img/breadcrumb/checkout-bg.jpg) no-repeat center bottom;
+        background-size: contain;
+        z-index: 1;
+        .overlay {
+            background: rgba(0, 0, 0, 0.33);
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+        .banner_content {
+            position: relative;
+            z-index: 10;
+            h2 {
+                color: #ffffff;
+                font-size: 48px;
+                font-family: $rob;
+                margin-bottom: 12px;
+                font-weight: 500;
+                margin-top: 120px;
+            }
+            .page_link {
+                a {
+                    font-size: 14px;
+                    color: #ffffff;
+                    font-family: $rob;
+                    margin-right: 32px;
+                    position: relative;
+                    &:before {
+                        content: "\e87a";
+                        font-family: 'Linearicons-Free';
+                        font-size: 14px;
+                        position: absolute;
+                        right: -25px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &:last-child {
+                        margin-right: 0px;
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    &:hover {
+                        color: $baseColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* End Home Banner Area css
+============================================================================================ */
