@@ -62,6 +62,9 @@
                             </div>
                         </div>
                         @empty
+                        <div class="col-md-12">
+                            <h3 class="text-center">Tidak ada produk</h3>
+                        </div>
                         @endforelse
                     </div>
                 </div>
@@ -72,13 +75,13 @@
                                 <h3>Kategori Produk</h3>
                             </div>
                             <div class="widgets_inner">
-                                <ul class="list">
+                                <ul class="list" >
                                     @foreach ($categories as $category)
                                     <li>
-                                        <a href="{{ $category->child_count > 0 ? '#':url('/category/' . $category->slug) }}">{{ $category->name }}</a>
+                                        <strong><a href="{{ url('/category/' . $category->slug) }}">{{ $category->name }}</a></strong>
                                         
                                         @foreach ($category->child as $child)
-                                        <ul class="list">
+                                        <ul class="list" style="display: block">
                                             <li>
                                                 <a href="{{ url('/category/' . $child->slug) }}">{{ $child->name }}</a>
                                             </li>
