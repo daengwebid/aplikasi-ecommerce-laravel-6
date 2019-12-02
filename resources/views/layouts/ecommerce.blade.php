@@ -31,7 +31,11 @@
 				</div>
 				<div class="float-right">
 					<ul class="right_side">
-						<li><a href="login.html">Login/Register</a></li>
+						@if (auth()->guard('customer')->check())
+							<li><a href="{{ route('customer.logout') }}">Logout</a></li>
+						@else
+							<li><a href="{{ route('customer.login') }}">Login</a></li>
+						@endif
 						<li><a href="#">My Account</a></li>
 						<li><a href="contact.html">Contact Us</a></li>
 					</ul>
