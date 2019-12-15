@@ -21,7 +21,11 @@ class OrderController extends Controller
     {
         $order = Order::with(['district.city.province', 'details', 'details.product', 'payment'])
             ->where('invoice', $invoice)->first();
-        return view('ecommerce.orders.view', compact('order'));
+        
+        if (\Gate::forUser(auth()->guard('customer')->user())->allows('order-view', $order)) {
+            return view('ecommerce.orders.view', compact('order'));
+        }
+        return redirect(route('customer.orders'))->with(['error' => 'Anda Tidak Diizinkan Untuk Mengakses Order Orang Lain']);
     }
 
     public function paymentForm()

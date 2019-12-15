@@ -36,6 +36,11 @@
                                     <h4 class="card-title">List Pesanan</h4>
                                 </div>
 								<div class="card-body">
+
+                                    @if (session('error'))
+                                    <div class="alert alert-danger">{{ session('error') }}</div>
+                                    @endif
+
 									<div class="table-responsive">
                                         <table class="table table-hover table-bordered">
                                             <thead>
