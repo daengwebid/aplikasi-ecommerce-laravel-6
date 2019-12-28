@@ -38,7 +38,12 @@
 								<div class="card-body">
 									<table>
                                         <tr>
-                                            <td width="30%">Nama Lengkap</td>
+                                            <td width="30%">InvoiceID</td>
+                                            <td width="5%">:</td>
+                                            <th><a href="{{ route('customer.order_pdf', $order->invoice) }}" target="_blank"><strong>{{ $order->invoice }}</strong></a></th>
+                                        </tr>
+                                        <tr>
+                                            <td>Nama Lengkap</td>
                                             <td width="5%">:</td>
                                             <th>{{ $order->customer_name }}</th>
                                         </tr>
