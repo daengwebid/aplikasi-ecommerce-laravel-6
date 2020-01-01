@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-md-6 form-group p_star">
                             <label for="">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ auth()->guard('customer')->user()->email }}" required {{ auth()->guard('customer')->check() ? 'readonly':'' }}>
                             <p class="text-danger">{{ $errors->first('email') }}</p>
                         </div>
                         <div class="col-md-12 form-group p_star">
