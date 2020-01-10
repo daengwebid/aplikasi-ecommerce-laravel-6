@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Order;
 use App\Payment;
 use Carbon\Carbon;
+use App\OrderReturn;
+use Illuminate\Support\Str;
 use DB;
 use PDF;
 
@@ -14,7 +16,8 @@ class OrderController extends Controller
 {
     public function index()
     {
-        $orders = Order::where('customer_id', auth()->guard('customer')->user()->id)->orderBy('created_at', 'DESC')->paginate(10);
+        $orders = Order::withCount(['return'])->where('customer_id', auth()->guard('customer')->user()->id)
+            ->orderBy('created_at', 'DESC')->paginate(10);
         return view('ecommerce.orders.index', compact('orders'));
     }
 
@@ -85,5 +88,49 @@ class OrderController extends Controller
 
         $pdf = PDF::loadView('ecommerce.orders.pdf', compact('order'));
         return $pdf->stream();
+    }
+
+    public function acceptOrder(Request $request)
+    {
+        $order = Order::find($request->order_id);
+        if (!\Gate::forUser(auth()->guard('customer')->user())->allows('order-view', $order)) {
+            return redirect()->back()->with(['error' => 'Bukan Pesanan Kamu']);
+        }
+
+        $order->update(['status' => 4]);
+        return redirect()->back()->with(['success' => 'Pesanan Dikonfirmasi']);
+    }
+
+    public function returnForm($invoice)
+    {
+        $order = Order::where('invoice', $invoice)->first();
+        return view('ecommerce.orders.return', compact('order'));
+    }
+
+    public function processReturn(Request $request, $id)
+    {
+        $this->validate($request, [
+            'reason' => 'required|string',
+            'refund_transfer' => 'required|string',
+            'photo' => 'required|image|mimes:jpg,png,jpeg'
+        ]);
+
+        $return = OrderReturn::where('order_id', $id)->first();
+        if ($return) return redirect()->back()->with(['error' => 'Permintaan Refund Dalam Proses']);
+
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $filename = time() . Str::random(5) . '.' . $file->getClientOriginalExtension();
+            $file->storeAs('public/return', $filename);
+
+            OrderReturn::create([
+                'order_id' => $id,
+                'photo' => $filename,
+                'reason' => $request->reason,
+                'refund_transfer' => $request->refund_transfer,
+                'status' => 0
+            ]);
+            return redirect()->back()->with(['success' => 'Permintaan Refund Dikirim']);
+        }
     }
 }
