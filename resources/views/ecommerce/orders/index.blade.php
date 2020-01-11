@@ -61,7 +61,12 @@
                                             <tbody>
                                                 @forelse ($orders as $row) 
                                                 <tr>
-                                                    <td><strong>{{ $row->invoice }}</strong></td>
+                                                    <td>
+                                                        <strong>{{ $row->invoice }}</strong><br>
+                                                        @if ($row->return_count == 1)
+                                                        <small>Return: {!! $row->return->status_label !!}</small>
+                                                        @endif
+                                                    </td>
                                                     <td>{{ $row->customer_name }}</td>
                                                     <td>{{ $row->customer_phone }}</td>
                                                     <td>{{ number_format($row->subtotal) }}</td>

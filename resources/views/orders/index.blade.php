@@ -68,7 +68,12 @@
                                             </td>
                                             <td>Rp {{ number_format($row->subtotal) }}</td>
                                             <td>{{ $row->created_at->format('d-m-Y') }}</td>
-                                            <td>{!! $row->status_label !!}</td>
+                                            <td>
+                                                {!! $row->status_label !!} <br>
+                                                @if ($row->return_count > 0)
+                                                    <a href="{{ route('orders.return', $row->invoice) }}">Permintaan Return</a>
+                                                @endif
+                                            </td>
                                             <td>
                                                 <form action="{{ route('orders.destroy', $row->id) }}" method="post">
                                                     @csrf

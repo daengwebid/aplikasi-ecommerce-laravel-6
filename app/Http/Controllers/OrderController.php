@@ -12,6 +12,7 @@ class OrderController extends Controller
     public function index()
     {
         $orders = Order::with(['customer.district.city.province'])
+            ->withCount('return')
             ->orderBy('created_at', 'DESC');
         
         if (request()->q != '') {
@@ -57,6 +58,21 @@ class OrderController extends Controller
         $order = Order::with(['customer'])->find($request->order_id);
         $order->update(['tracking_number' => $request->tracking_number, 'status' => 3]);
         Mail::to($order->customer->email)->send(new OrderMail($order));
+        return redirect()->back();
+    }
+
+    public function return($invoice)
+    {
+        $order = Order::with(['return', 'customer'])->where('invoice', $invoice)->first();
+        return view('orders.return', compact('order'));
+    }
+
+    public function approveReturn(Request $request)
+    {
+        $this->validate($request, ['status' => 'required']);
+        $order = Order::find($request->order_id);
+        $order->return()->update(['status' => $request->status]);
+        $order->update(['status' => 4]);
         return redirect()->back();
     }
 }
