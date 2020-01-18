@@ -23,6 +23,8 @@ Route::get('/checkout', 'Ecommerce\CartController@checkout')->name('front.checko
 Route::post('/checkout', 'Ecommerce\CartController@processCheckout')->name('front.store_checkout');
 Route::get('/checkout/{invoice}', 'Ecommerce\CartController@checkoutFinish')->name('front.finish_checkout');
 
+Route::get('/product/ref/{user}/{product}', 'Ecommerce\FrontController@referalProduct')->name('front.afiliasi');
+
 Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
     Route::get('login', 'LoginController@loginForm')->name('customer.login');
     Route::post('login', 'LoginController@login')->name('customer.post_login');
@@ -44,6 +46,8 @@ Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
 
         Route::get('setting', 'FrontController@customerSettingForm')->name('customer.settingForm');
         Route::post('setting', 'FrontController@customerUpdateProfile')->name('customer.setting');
+        
+        Route::get('/afiliasi', 'FrontController@listCommission')->name('customer.affiliate');
     });
 });
 
