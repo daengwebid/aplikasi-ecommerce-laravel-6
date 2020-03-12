@@ -13,7 +13,7 @@ class CityTableSeeder extends Seeder
     public function run()
     {
         DB::insert("
-        INSERT INTO `cities` (`id`, `province_id`, `name`, `type`, `postal_code`, `created_at`, `updated_at`) VALUES
+        INSERT INTO 'cities' ('id', 'province_id', 'name', 'type', 'postal_code', 'created_at', 'updated_at') VALUES
         (1, 21, 'Aceh Barat', 'Kabupaten', '23681', '2019-08-29 12:55:53', '2019-08-29 12:55:53'),
         (2, 21, 'Aceh Barat Daya', 'Kabupaten', '23764', '2019-08-29 12:55:53', '2019-08-29 12:55:53'),
         (3, 21, 'Aceh Besar', 'Kabupaten', '23951', '2019-08-29 12:55:53', '2019-08-29 12:55:53'),
