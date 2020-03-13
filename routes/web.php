@@ -46,7 +46,7 @@ Route::group(['prefix' => 'member', 'namespace' => 'Ecommerce'], function() {
 
         Route::get('setting', 'FrontController@customerSettingForm')->name('customer.settingForm');
         Route::post('setting', 'FrontController@customerUpdateProfile')->name('customer.setting');
-        
+
         Route::get('/afiliasi', 'FrontController@listCommission')->name('customer.affiliate');
     });
 });
