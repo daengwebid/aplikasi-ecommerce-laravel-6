@@ -7,11 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $guarded = [];
-    protected $appends = ['status_label', 'ref_status_label', 'commission'];
+    protected $appends = ['status_label', 'ref_status_label', 'commission', 'total'];
     
     public function district()
     {
         return $this->belongsTo(District::class);
+    }
+
+    public function getTotalAttribute()
+    {
+        return $this->subtotal + $this->cost;
     }
 
     public function getStatusLabelAttribute()

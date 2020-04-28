@@ -15,3 +15,4 @@ use Illuminate\Http\Request;
 
 Route::get('city', 'Ecommerce\CartController@getCity');
 Route::get('district', 'Ecommerce\CartController@getDistrict');
+Route::post('cost', 'Ecommerce\CartController@getCourier');
