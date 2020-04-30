@@ -23,6 +23,13 @@ Berikut adalah tutorial cara Membuat Aplikasi E-Commerce Laravel 6
 - [Aplikasi E-Commerce Laravel 6 #10: Multiple Authentication](https://daengweb.id/aplikasi-e-commerce-laravel-6-10-multiple-authentication).
 - [Aplikasi E-Commerce Laravel 6 #11: Dashboard & Management Orders](https://daengweb.id/aplikasi-e-commerce-laravel-6-11-dashboard-management-orders).
 - [Aplikasi E-Commerce Laravel 6 #12: Authorization & Customer Profile](https://daengweb.id/aplikasi-e-commerce-laravel-6-12-authorization-customer-profile).
+- [Aplikasi E-Commerce Laravel 6 #13: Membuat Faktur PDF
+](https://daengweb.id/aplikasi-e-commerce-laravel-6-13-membuat-faktur-pdf).
+- [Aplikasi E-Commerce Laravel 6 #14: Kelola Pesanan (Admin) & Broadcast Resi](https://daengweb.id/aplikasi-e-commerce-laravel-6-14-kelola-pesanan-admin-broadcast-resi).
+- [Aplikasi E-Commerce Laravel 6 #15: Complaint & Return Order](https://daengweb.id/aplikasi-e-commerce-laravel-6-15-complaint-return-order).
+- [Aplikasi E-Commerce Laravel 6 #16: Integrasi Telegram Bot](https://daengweb.id/aplikasi-e-commerce-laravel-6-16-integrasi-telegram-bot).
+- [Aplikasi E-Commerce Laravel 6 #17: Laporan Periode Date Range](https://daengweb.id/aplikasi-e-commerce-laravel-6-17-laporan-periode-date-range).
+- [Aplikasi E-Commerce Laravel 6 #18: Membuat Fitur Afiliasi](https://daengweb.id/aplikasi-e-commerce-laravel-6-18-membuat-fitur-afiliasi).
 
 
 ## License
