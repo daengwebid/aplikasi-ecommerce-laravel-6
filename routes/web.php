@@ -60,6 +60,7 @@ Route::group(['prefix' => 'administrator', 'middleware' => 'auth'], function() {
     Route::resource('product', 'ProductController')->except(['show']);
     Route::get('/product/bulk', 'ProductController@massUploadForm')->name('product.bulk');
     Route::post('/product/bulk', 'ProductController@massUpload')->name('product.saveBulk');
+    Route::post('/product/marketplace', 'ProductController@uploadViaMarketplace')->name('product.marketplace');
 
     Route::group(['prefix' => 'orders'], function() {
         Route::get('/', 'OrderController@index')->name('orders.index');
